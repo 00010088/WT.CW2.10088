@@ -1,0 +1,36 @@
+extends layout.pug
+
+block layout-content
+  main.create-student
+    h2.form-title Student's information
+    
+    if success
+      p.success Student's information was added successfully
+
+    if error
+      p.error Please add all necessary Student's information 
+
+    form(method="POST")
+      label.label Name
+      input(class="student-input" name="name")
+
+      label.label Surname
+      input(class="student-input" name="surname")
+
+      label.label Date of birth
+      input(class="student-input" name="dob")
+
+      label.label Faculty
+      input(class="student-input" name="faculty")
+
+      label.label Email adress
+      input(class="student-input" name="email")
+
+      label.label Mobile phone
+      input(class="student-input" name="mobile")
+
+      
+      br
+
+      
+      button.create-student-btn Save information

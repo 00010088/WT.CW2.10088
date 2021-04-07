@@ -1,0 +1,13 @@
+extends layout.pug
+
+block layout-content
+  main.all-students     
+    if students.length
+      ul.students
+        each student in students
+          li.student-item 
+            a.std-item(href=`students/${ student.id }`)= student.name
+            a.delete-student(href=`students/${ student.id }/delete`) Delete
+            a.delete-student(href=`students/${ student.id }/updateInfo`) Update
+    else
+      p.empty No any student yet

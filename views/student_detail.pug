@@ -1,0 +1,34 @@
+extends layout.pug
+
+block layout-content
+  main.all-students
+    h2.student-title= student.title
+      if !student.archive
+        a.archive-link(href=`/students/${ student.id }/archive`) Move to Alumni List
+    
+    .name 
+      p.info-label Employee's name
+      h2.info-name= student.name
+    .surname
+      p.info-label Employee's surname
+      h2.info-surname= student.surname
+    .dob
+      p.info-label Date of birth
+      h2.info-name= student.dob
+    .faculty
+      p.info-label Faculty
+      h2.info-surname= student.faculty
+    .email
+      p.info-label Email adress
+      h2.info-name= student.email
+    .phone
+      p.info-label Phone number
+      h2.info-surname= student.mobile
+
+  
+      
+    
+    script(type="text/javascript").
+      window.onload = function () {
+        document.getElementById('body').innerHTML = marked(document.getElementById('body').innerHTML);
+      }
