@@ -11,7 +11,7 @@ git clone https://github.com/00008869/WT.CW2.00008869
 2.Install dependencies
 npm install
 3.Run the application 
-node index.js
+node app.js
 # List of dependencies
 - express
 - pug
